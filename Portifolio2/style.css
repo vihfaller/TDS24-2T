@@ -1,0 +1,232 @@
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.logo{
+    font-family: 'Pacifico';
+}
+
+.interface{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #7d7d7d;
+    text-decoration: none; /* tira o sublinhado das lçistas */
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.2);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+#btn-contato{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(192, 0, 192);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1.2;
+}
+
+#btn-contato:hover{
+    box-shadow: 0px 0px 8px rgb(192, 0, 192);
+    transform: scale(1.1);
+}
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: rgb(192, 0, 192);
+}
+
+/* ESTILO DO TOPO DO SITE */
+
+
+      
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /* linha de respiro */
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: rgb(192, 0, 192);
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    /* alternate: nao saia do 100 e pule pro 0, ira ir de 0 a 100 suave e depois de 100 a 0 suave*/
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    /* so vai funcionar se o elemento nao for position static */
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+#btn-contato2{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(192, 0, 192);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1.2;
+}
+
+#btn-contato2:hover{
+    box-shadow: 0px 0px 8px rgb(192, 0, 192);
+    transform: scale(1.1);
+}
+
+
+
+
+/* ESTILO DAS ESPECIALIDADES */
+
+section.especialidades {
+    padding: 40px 4%;
+}
+
+
+
+.interface2{
+    display: flex;
+    flex-direction: row;
+    border: solid red 2px;    
+}
+
+.especialidades-box{
+    border: solid green 2px;
+}
+
+.flex2{
+    border: solid green 2px;
+}
+
+.especialidades .especialidades-box {
+    width: 100%;
+    color: white;
+    padding: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: .2s;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.475);
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: rgb(192, 0, 192);
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO SOBRE */
+
+section.sobre .img-sobre{
+    border: red solid 2px;
+}
+
+section.sobre{
+    padding: 40px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: rgb(192, 0, 192);
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
