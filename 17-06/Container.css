@@ -1,0 +1,41 @@
+/* ordem-> coloca o container na ordem que queremos */
+
+#container-pai{
+    height: 500px;
+    background-color: black;
+    padding: 25px; /* Margem interna */
+    display: flex;
+    flex-direction: row; /* Controla o eixo principal. Imagem que o container q 
+    tem o diplay flex é uma caixinha, o eixo pricipal diz respeito
+    para qual direçao vao ser dispostos os elementos filhos */ 
+    justify-content: center; /* Justifica de acordo com o eixo principal 
+    do meu container */
+    align-items: center;
+    gap: 15px;
+    flex-grow: wrap-reverse;
+}
+
+#container-1{
+    background-color: rgb(147, 135, 250);
+    padding: 15px;
+
+}
+
+#container-2{
+    background-color: brown;
+    
+    padding: 15px;
+
+}
+
+#container-3{
+    background-color: rgb(145, 103, 51);
+    padding: 15px;
+
+}
+
+.fonte{
+    color:rgb(95, 73, 73);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

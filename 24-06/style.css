@@ -1,0 +1,54 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+#form-container{
+    background-color: black;
+    height: 1050px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#form-container form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea{
+    padding: 10px;
+    /* Espessura | Tipo de preenchimento |  Cor  */
+    border: 1px solid #ccc; /* Aplica uma borda no elemento */
+    border-radius: 5px; /* Cantos arredondados */ 
+}
+
+/* Espaçamento para checkbox e radio */
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 5px;
+} 
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+

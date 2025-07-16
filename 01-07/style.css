@@ -1,0 +1,23 @@
+*{
+    /* Aplicando uma fonte local */
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font: bold italic 64px 'Scriptorial';
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace
+}
+
+@font-face {
+    font-family: 'Scriptorial';
+    src: url(./fonts/Scriptorial.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

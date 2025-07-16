@@ -1,0 +1,11 @@
+.button-confirm {
+    background-color: var(--cor-primaria);
+}
+
+.button-cancel {
+    background-color: var(--cor-cancel);
+}
+
+.button-register {
+
+}

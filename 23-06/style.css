@@ -1,0 +1,35 @@
+*{/* Tag utilizada para aplicar algo em toda a pagina web */
+    padding: 0;
+    margin: 0;
+}
+
+.container-pai{
+    background-color: rgb(0, 0, 0);
+    height: 500px;
+    
+    display: flex;
+    flex-direction: center; /* controla a direçao do eixo principal */
+    justify-content: center; /* controla como os itens serao dispostos no eixo principal */
+    align-items: center; /* controla como os itens serao dispostos no eixo secundario */
+    flex-wrap: wrap; /* controla como os itens se comportam quando a tela diminui */
+    gap: 20px; /* define o espaçamento entre elementos */
+}
+
+
+
+#filho-1{
+    background-color: aquamarine;
+    flex-grow: 1;
+    order: 0; /* declara a ordem, justamente mexendo na ordem dos elementos */
+}
+
+#filho-2{
+    background-color: blueviolet;
+    flex-grow: 1;
+    align-self:  /* como vai ficar colocado na pagina com apenas aquele item */
+}
+
+#filho-3{
+    background-color: chartreuse;
+    flex-grow: 1; /* numero do tamanho do elemento */
+}

@@ -1,0 +1,9 @@
+/* 
+    Cuida do posicionamento e disposicao dos elementos. Como o elemento vai ficar na tela
+*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

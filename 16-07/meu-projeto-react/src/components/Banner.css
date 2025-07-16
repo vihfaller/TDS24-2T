@@ -1,0 +1,13 @@
+.banner-container{
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -5px;
+    background-image: url(https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    color: white;
+    font-size: 3rem;
+    align-items: center;
+    padding-left: 25vw;
+    padding-top: 10vh;
+}

@@ -1,0 +1,26 @@
+body{
+    background-color: bisque; /* cor de fundo */
+    color: rgb(0, 0, 0); /* cor da fonte */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* alteração da fonte */
+
+
+}
+
+pf{
+    font-size: 16px; /* tamanho da fonte */
+    line-height: 1.4; /* espaçamento entre linhas */ 
+}
+
+img{
+    width: 100px; /* largura imagem */
+    height: 100px; /* altura imagem */
+}
+
+a{
+    color: red;
+    text-decoration: none; /* decoraçao do elemento */
+}
+
+a:hover{
+    color:rgb(61, 102, 19);
+}

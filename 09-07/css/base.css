@@ -1,0 +1,52 @@
+/* Estilo padrao para as páginas
+   VariaveisCSS (CSS Custom Properties
+   estilos na página.
+*/
+
+:root {
+    --cor-primaria: #ff6600;
+    --cor-secundaria: #333333;
+    --cor-fonte: #f5f5f5;
+    --cor-fundo: #161616;
+    --font-base: 'Arial', sans-serif;
+    --small: 12px;
+    --regular: 32px;
+    --large: 64px;
+    --xlarge: 100px
+    --cor-confirm: #7bff00;
+    --cor-cancel: var(--cor-fundo);
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--regular);
+    line-height: 1.5;
+    color: var(--cor-fonte);
+    background-color: var(--cor-fundo);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+}
+
+p {
+    margin-bottom: 1em ;
+}
+
+button {
+    padding: 25px;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+}

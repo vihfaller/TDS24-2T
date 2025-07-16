@@ -1,0 +1,234 @@
+/* Zera o espaçamento interno (padding), externo (margin) e define a box-sizing como border-box
+   Isso garante que o padding e a borda sejam incluídos na largura e altura dos elementos */
+   * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Define a fonte padrão da página como Arial ou uma fonte sans-serif */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estiliza o cabeçalho (header):
+     - Fundo preto
+     - Texto branco
+     - Layout em linha (flexbox), com espaçamento entre os itens
+     - Centraliza os itens verticalmente
+     - Adiciona um espaçamento interno (padding)
+     - Permite que os itens quebrem linha se necessário (wrap) */
+  header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 1s ease;
+  }
+  
+  /* Estiliza os links dentro do header:
+     - Texto branco
+     - Remove o sublinhado
+     - Margem ao redor para separação */
+  header a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+  }
+  
+  /* Ícone do menu ("hamburger") que só aparece no mobile:
+     - Inicialmente oculto */
+     
+  .show {
+    display: none;
+  }
+  
+  /* Estiliza o menu de navegação (nav):
+     - Mostra os itens em linha (horizontalmente)
+     - Espaçamento entre os itens
+     - Adiciona transição suave para as propriedades max-height e opacity */
+  nav {
+    display: flex;
+    gap: 10px;
+    transition: max-height 0.5s ease, opacity 0.5 ease; /* OBS: falta 's' em '0.5 ease', corrigido abaixo */
+  }
+  
+  /* MEDIA QUERY: Aplica estilos somente quando a largura da tela for até 1125px */
+
+
+  #banner {
+    height: 80vh; /* 80% da altura da tela */
+    background-image: url(https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg); /* aplica uma imagem de background */
+    background-size: cover;
+    background-position: center;
+}
+
+header.change{
+    background-color: black(0,0,0,0.547);
+}
+
+#cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 50px 0px 50px 0px;
+    
+}
+
+.card {
+    width: 20vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px black(0,0,0,0.287);
+    transition: transform 0.5s ease;
+}
+.card img{
+    width: 100%;
+}
+
+.card:hover{
+    transform: scale(1.2);
+}
+
+header a:hover{
+    transform: scale(1.2);
+    color: white;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    transform: transform 0.5s ease;
+}
+
+/* 2 abaixos fazem aparecer devagar */
+@keyframes fade-in {
+    /* inicia com opacidade em 0 e vai ate 1 */
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+
+.fade-in{
+    animation: fade-in 2s ease forwards;
+}
+
+/* Deslizar de um canto ao outro */
+
+@keyframes slide-in {
+    from { transform: translatex(-100%); opacity: 0;}
+    to {transform: translatex(0); opacity: 1;}
+}
+
+.slide-in {
+    animation: slide-in 1s ease;
+}
+
+/* Deslizar para fora da tela */
+
+
+/* Zoom-in (aumenta algo quando aparece */
+
+@keyframes zoom-in {
+    from { transform: scale(0.5);}
+    to { transform: scale(1); opacity: 1;}
+}
+
+.zoom-in{
+    animation: zoom-in 1s ease;
+}
+
+
+/* pulsar */
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  .pulse {
+    animation: pulse 1s infinite;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    height: 50vh;
+  }
+
+  .box{
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+  }
+
+  .box.visible {
+    animation: fade-in 3s forwards;
+  }
+
+  /* Root tem escopo global nas variaveis */
+  :root{
+    --cor-principal: #ff6600;
+  --fonte-base: 'Arial', sans-serif;
+  }
+  
+  
+  
+  
+
+
+
+
+  @media (max-width: 1125px) {
+  
+    /* Altera a direção do header para coluna (um item abaixo do outro)
+       Adiciona espaçamento vertical entre os elementos */
+    header {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    /* Agora o ícone do menu é exibido em dispositivos móveis */
+    .show {
+      display: flex;
+    }
+  
+    /* Menu de navegação no mobile:
+       - Mostra os itens em coluna (verticalmente)
+       - Centraliza os itens
+       - Largura total da tela
+       - Inicialmente oculto (max-height 0 e opacity 0)
+       - Transição suave para a exibição do menu */
+    nav {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-height: 0;
+      opacity: 0;
+  
+      /* Transição suave:
+         Quando max-height ou opacity forem alteradas (via classe, clique, etc.),
+         a mudança será animada por 0.5s com curva "ease" */
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+    }
+  
+    /* Quando a classe 'ativo' for adicionada ao nav (fazemos isso por JS),
+       o menu é exibido:
+       - Altura máxima suficiente para mostrar os itens
+       - Opacidade total */
+    nav.ativo {
+      max-height: 500px; /* valor ajustável conforme o conteúdo do menu */
+      opacity: 1;
+    }
+  }
